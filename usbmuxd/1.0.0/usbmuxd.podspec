@@ -21,6 +21,7 @@ LICENSE
  s.source_files = 'libusbmuxd/*.{h,c,m,cpp}', 'include/*.h', 'common/*.{h,c,m,cpp}'
  s.dependency 'libplist'
  s.public_header_files = 'libusbmuxd/usbmuxd.h'
- s.xcconfig = {"GCC_PREPROCESSOR_DEFINITIONS" => 'HAVE_PLIST',  "HEADER_SEARCH_PATHS" => '"${PODS_ROOT}/libplist/include/"'}
+ s.xcconfig = {"GCC_PREPROCESSOR_DEFINITIONS" => 'HAVE_PLIST',  "USER_HEADER_SEARCH_PATHS" => '"${PODS_ROOT}/usbmuxd/common/" "${PODS_ROOT}/libplist/include/"', "ALWAYS_SEARCH_USER_PATHS" => 'YES'}
+
 end
 
